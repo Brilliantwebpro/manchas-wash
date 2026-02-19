@@ -1,8 +1,16 @@
-﻿import Seo from "../components/Seo.jsx";
+﻿import { useState } from "react";
+import Seo from "../components/Seo.jsx";
 import { brand } from "../data/siteData.js";
 import contactImg from "../assets/Detailing images/beautiful-car-interior-clean-up-service.jpg";
 
 const Contact = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
     <>
       <Seo
@@ -36,7 +44,7 @@ const Contact = () => {
               <img src={contactImg} alt="Interior detailing service" />
             </div>
           </div>
-          <form className="card form contact-form">
+          <form className="card form contact-form" onSubmit={handleSubmit}>
             <div className="form-grid">
               <div>
                 <label>Name</label>
@@ -68,7 +76,9 @@ const Contact = () => {
               Send Request
             </button>
             <p className="notice">
-              We usually respond the same day.
+              {submitted
+                ? "Thanks. Your request has been received and we will reply soon."
+                : "We usually respond the same day."}
             </p>
           </form>
         </div>

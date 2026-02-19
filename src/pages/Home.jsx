@@ -9,6 +9,7 @@ import {
   membership,
   processSteps,
 } from "../data/siteData.js";
+import { Link } from "react-router-dom";
 import heroImg from "../assets/Detailing images/car-detailing-concept-man-face-mask-with-orbital-polisher-repair-shop-polishing-roof-orange-suv-car.jpg";
 import interiorImg from "../assets/Detailing images/beautiful-car-interior-clean-up-service.jpg";
 import washImg from "../assets/Detailing images/car-wash-detailing-station (2).jpg";
@@ -51,12 +52,12 @@ const Home = () => {
               consistent results.
             </p>
             <div style={{ display: "flex", gap: 16, marginTop: 24, flexWrap: "wrap" }}>
-              <a className="btn btn-primary" href="/booking">
+              <Link className="btn btn-primary" to="/booking">
                 Book a Wash
-              </a>
-              <a className="btn btn-ghost" href="/services">
+              </Link>
+              <Link className="btn btn-ghost" to="/services">
                 View Pricing
-              </a>
+              </Link>
             </div>
             <ul className="list" style={{ marginTop: 24 }}>
               <li>Service options for cars, trucks, and SUVs</li>
@@ -221,12 +222,12 @@ const Home = () => {
             </p>
           </div>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a className="btn btn-primary" href="/booking">
+            <Link className="btn btn-primary" to="/booking">
               Book Appointment
-            </a>
-            <a className="btn btn-ghost" href="/contact">
+            </Link>
+            <Link className="btn btn-ghost" to="/contact">
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -290,3 +291,4 @@ const Home = () => {
 };
 
 export default Home;
+

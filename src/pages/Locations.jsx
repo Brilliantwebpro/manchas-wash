@@ -1,4 +1,5 @@
-﻿import Seo from "../components/Seo.jsx";
+﻿import { Link } from "react-router-dom";
+import Seo from "../components/Seo.jsx";
 import { brand } from "../data/siteData.js";
 import travelImg from "../assets/Detailing images/car-wash-detailing-industry.jpg";
 
@@ -56,12 +57,12 @@ const Locations = () => {
               </p>
             </div>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <a className="btn btn-primary" href="/contact">
+              <Link className="btn btn-primary" to="/contact">
                 Check Coverage
-              </a>
-              <a className="btn btn-ghost" href="/booking">
+              </Link>
+              <Link className="btn btn-ghost" to="/booking">
                 Book Now
-              </a>
+              </Link>
             </div>
           </div>
         </div>

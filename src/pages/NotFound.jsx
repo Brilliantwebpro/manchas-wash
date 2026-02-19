@@ -1,3 +1,4 @@
+﻿import { Link } from "react-router-dom";
 import Seo from "../components/Seo.jsx";
 
 const NotFound = () => {
@@ -15,12 +16,12 @@ const NotFound = () => {
             service.
           </p>
           <div style={{ marginTop: 24, display: "flex", gap: 12 }}>
-            <a className="btn btn-primary" href="/">
+            <Link className="btn btn-primary" to="/">
               Go Home
-            </a>
-            <a className="btn btn-ghost" href="/booking">
+            </Link>
+            <Link className="btn btn-ghost" to="/booking">
               Book Now
-            </a>
+            </Link>
           </div>
         </div>
       </section>
