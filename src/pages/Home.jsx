@@ -160,6 +160,7 @@ const Home = () => {
               We focus on quality basics done right: showing up on time,
               communicating clearly, and delivering clean vehicles every time.
             </p>
+            <img className="image-round" src={washImg} alt="Vehicle being washed by Manchas Wash" />
           </div>
         </div>
       </section>
