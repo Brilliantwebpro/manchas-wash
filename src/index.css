@@ -600,7 +600,7 @@ img {
     display: none;
   }
 
-  .mobile-menu {
+  .header .mobile-menu {
     display: inline-flex;
   }
 
